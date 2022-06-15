@@ -1,5 +1,3 @@
-# FCTT4Rec
-Fusing Collaborative Transformation with Temporal aware Target Interaction Networks for Sequential Recommendation
 ## fctt
 
 This repository contains the pytorch implementation of fctt.
