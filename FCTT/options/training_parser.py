@@ -146,10 +146,9 @@ class TrainingParser:
         parser.add_argument('--marank_num_att_layers', type=int, help='Number of attention layers for MARank')
         parser.add_argument('--marank_num_linear_layers', type=int, help='Number of linear layers for MARank')
         # MEANTIME
-        parser.add_argument('--absolute_kernel_types', type=str, default='p',help="Absolute kernel types separated by'-'(e.g. d-c). p=Pos, d=Day, c=Con")
-        # parser.add_argument('--relative_kernel_types', type=str,default='t-s', help="Relative kernel types separated by'-'(e.g. e-l). s=Sin, e=Exp, l=Log")
-        parser.add_argument('--relative_kernel_types', type=str, default='',
-                            help="Relative kernel types separated by'-'(e.g. e-l). s=Sin, e=Exp, l=Log")
+        parser.add_argument('--absolute_kernel_types', type=str, default='p-d',help="Absolute kernel types separated by'-'. p=Pos, d=Day)
+        parser.add_argument('--relative_kernel_types', type=str,default='t-s', help="Relative kernel types separated by'-'.t=time,s=per)
+
 
         args = parser.parse_known_args(self.sys_argv)[0]
         return vars(args)
